@@ -53,12 +53,12 @@ exports.config = {
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
-        browserName: 'Chrome',
         "appium:deviceName": "emulator-5554",
         "appium:platformVersion": "Android 11",
         "appium:automationName": "UIAutomator2",
         "appium:noReset": true,
-        "appium:retryBackoffTime": "500"
+        "appium:retryBackoffTime": "500",
+        "appium:app": "C:/Users/ervin/OneDrive/Desktop/wdioFramework/android.wdio.apk"
     }],
 
     //

@@ -21,5 +21,10 @@
     "appium-uiautomator2-driver": "^3.8.3",
     "wdio-vscode-service": "^6.1.2",
     "wdio-wait-for": "^3.0.11"
+  },
+  "dependencies": {
+    "@wdio/cli": "^9.2.14",
+    "appium": "^2.12.1",
+    "chai": "^5.1.2"
   }
 }
