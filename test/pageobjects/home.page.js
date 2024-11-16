@@ -2,13 +2,8 @@ const { $ } = require('@wdio/globals')
 
 
 class HomePage {
-   // get loginButton() { return $('~Login'); }
-    get formsButton() { return $('//android.widget.TextView[@text="Forms"]'); }
-    // Add other selectors here...
-
-  //  async openLogin() { await this.loginButton.click(); }
-    async openForms() { await this.formsButton.click(); }
-    // Add other navigation actions...
+get webdriverioText() {return $('//android.widget.TextView[@text="WEBDRIVER"]')}
+get webdriverText() {return $('//android.widget.TextView[@text="Demo app for the appium-boilerplate"]')}
 }
 
 module.exports = new HomePage();

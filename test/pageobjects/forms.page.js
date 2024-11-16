@@ -1,9 +1,16 @@
 class FormsPage {
-    get inputField() { return $('~input'); }
-    get switch() { return $('~switch'); }
-    get dropdown() { return $('~dropdown'); }
-    get submitButton() { return $('~submit'); }
-    get successMessage() { return $('~success-message'); }
+
+    get fromPageNav() {return $('//android.widget.TextView[@text="Forms"]')}
+
+    async navigateToForms() {
+        await this.fromPageNav.click();
+    }
+
+    get inputField() { return $('//android.widget.EditText[@content-desc="text-input"]'); }
+    get switch() { return $('//android.widget.Switch[@content-desc="switch"]'); }
+    get dropdown() { return $('//android.widget.EditText[@resource-id="text_input\]'); }
+    get submitButton() { return $('//android.widget.TextView[@text="Active"]'); }
+    get successMessage() { return $('//android.widget.TextView[@content-desc="input-text-result"]'); }
 
     async fillForm(text) {
         await this.inputField.setValue(text);

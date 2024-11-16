@@ -1,5 +1,5 @@
 class SwipePage {
-    get carouselItem() { return $('~carousel-item'); }
+    get carouselItem() { return $('//android.widget.TextView[@text="JS.FOUNDATION"]'); }
 
     async swipeLeft() {
         await driver.touchAction([
