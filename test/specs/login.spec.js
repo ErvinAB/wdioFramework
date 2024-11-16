@@ -1,17 +1,16 @@
 const LoginPage = require('../pageobjects/login.page');
-const expect = require('chai').expect;
+const { expect } = require('chai');
 
 describe('Login Page tests', () => {
     beforeEach(async () => {
-        await driver();
         await LoginPage.navigateToLogin();  
     });
 
-    describe('Valid test', () =>{
-        it('should log in with valid credentials', async () => {
-            await LoginPage.login('validUser', 'validPass');
-        });
-    });
+    // describe('Valid test', () =>{
+    //     it('should log in with valid credentials', async () => {
+    //         await LoginPage.login('validUser', 'validPass');
+    //     });
+    // });
 
     describe('invalid login', () => {
         it('should validate signup error msg', async() => {

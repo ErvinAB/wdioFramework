@@ -1,15 +1,17 @@
 const { expect } = require('@wdio/globals')
+import homePage from '../pageobjects/home.page';
 
 
 const HomePage = require('../pageobjects/home.page');
 
 describe('Home Screen Tests', () => {
     it('should navigate to the Login screen', async () => {
-        await HomePage.openLogin();
-        // Add assertion to confirm Login screen opened
+       const webdriverIO = await homePage.webdriverioText.isDisplayed();
+       expect(webdriverIO).to.be.true();
+      
     });
     it('should navigate to the Forms screen', async () => {
-        await HomePage.openForms();
-        // Add assertion to confirm Forms screen opened
+        const webdriverTextVal = await homePage.webdriverText.isDisplayed();
+        expect(webdriverTextVal).to.be.true();
     });
 });

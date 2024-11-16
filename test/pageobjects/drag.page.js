@@ -1,6 +1,13 @@
 class DragPage {
-    get draggableElement() { return $('~draggable'); }
-    get targetElement() { return $('~target'); }
+    get swipeButton() {return $('//android.widget.TextView[@text="Swipe"]')}
+
+    async navigateToSwap(){
+        await this.swipeButton.click();
+    }
+
+
+    get draggableElement() { return $('(//android.view.ViewGroup[@content-desc="card"])[1]'); }
+    get targetElement() { return $('(//android.view.ViewGroup[@content-desc="card"])[3]'); }
 
     async dragToTarget() {
         await driver.touchAction([
